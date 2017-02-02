@@ -1,0 +1,1 @@
+document.getElementById("test") = 5+5;

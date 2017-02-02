@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "Aptitude Plugin",
+  "description": "This extension will record your online behaviour and reflect the information back to you in real-time.",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "eye-icon.png",
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "activeTab",
+   "tabs",
+   "browsingData",
+   "idle",
+   "storage",
+   "storage"
+   ]
+}
