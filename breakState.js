@@ -1,6 +1,6 @@
 function BreakState() {
 	this.length = function() {
-		return localStorage["break-selection"] || 10;
+		return localStorage["break-selection"] || 15;
 	};
 	this.delay = 10;
 	this.html = "popup.html";
