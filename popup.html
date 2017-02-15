@@ -1,48 +1,44 @@
-<!doctype html>
-<!--
- This page is shown when the extension button is clicked, because the
- "browser_action" field in manifest.json contains the "default_popup" key with
- value "popup.html".
- -->
-<html>
-  <head>
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-     <link rel="stylesheet" type="text/css" href="main.css">
-  </head>
-  <body>
-    <div id="container">
-      <h1>Alpha</h1>
-	  <table>
-	    <tr>
-	      <th><a style="color:red">420</a>/<a>360</a></th>
-	      <th><a style="color:green">183</a>/<a>120</a></th>
-	    </tr>
-	    <tr>
-		  <td>Free time</td>
-		  <td>Work time</td>
-	    </tr>
-	  </table>
-	  <div id="current-state">
-	    <h2 id="current-time">0:00</h2>
-	  </div>
-	  <div id="controls">
-        <div class="controls-buttons-group">
-          <button type="button" id="stop">stop</button>
-        </div>
-		<div class="controls-buttons-group">
-          <button type="button" id="start">start</button>
-        </div>
-      </div>
-    </div>
-    <script type="text/javascript" src="popup.js"></script>
-	<script type="text/javascript" src="moment.js"></script>
-    <script src="timer.js"></script>
-	
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  
+  <!-- our javascript code for user interaction -->
+  <script src="popup.js"></script>
+  
+  <!-- links to a massive css style sheet -->
+  <link href="bootstrap.min.css" rel="stylesheet" media="screen">
+  
+  <!-- our personalised stylesheet-->
+  <link href="main.css" rel="stylesheet">
+  
+</head>
+
+<body>
+
+  <!-- bootstrap style class triggers -->
+  <!-- id does not trigger style, it is used for javascript -->
+  <div class="container-fluid">    
+    <div id="main" class="row-fluid">
+      <div class="span12">
+	  
+        <form class="form-control" name="choices">
+  
+		  <h1 id="numberLabel">0</h1>
+      
+          <button type="button" id="plusFive" class="btn btn-success">
+		    <span class="icon-plus icon-white"></span>5
+		  </button>
+          <button type="button" id="minusFive" class="btn btn-success">
+		   <span class="icon-minus icon-white"></span>5
+		  </button>
+           
+        </form>
+	  
+	  </div>
+    </div>
+  </div>
+    
+</body>
+
+</html>

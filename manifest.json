@@ -1,20 +1,12 @@
 {
-	"manifest_version": 2,
+  "manifest_version": 2,
 
-	"name": ":Procrastinotion",
-	"description": "This extension is a timer.",
-	"version": "0.0.0.1",
+  "name": "Button testing",
+  "description": "Simple button",
+  "version": "0.0.0.1",
 
-	"browser_action": {
-		"default_icon": "eye-icon.png",
-		"default_title": "Procrastinotion"
-	},
-	"background": {
-		"scripts": ["pomodoroState.js", "breakState.js", "moment.js", "background.js"],
-		"persistent": false
-	},
-	"permissions": [
-		"notifications",
-		"tabs"
-	]
+  "browser_action": {
+   "default_icon": "eye-icon.png",
+   "default_popup": "popup.html"
+  }
 }

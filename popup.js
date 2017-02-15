@@ -1,30 +1,25 @@
-/**
- * Initially called when extension page loads. Attaches click handlers to all the buttons.
- */
-function init() {
-	document.getElementById("pomodoro").innerText = localStorage["pomodoro-selection"] || 15;
-	document.getElementById("break").innerText = localStorage["break-selection"] || 15;
+// inherits background.js
+var bgpage = chrome.extension.getBackgroundPage();
 
-	var buttonGroups = document.getElementsByClassName("time-buttons-group")
-	Array.prototype.forEach.call(buttonGroups, function(divElem) {
+// primary function to connect to extension
+document.addEventListener('DOMContentLoaded', function () {
 
-		Array.prototype.forEach.call(divElem.childNodes, function(elem) {
-			elem.onclick = timeButtonOnClickHandler;
-		});
+	// listens for a mouse click
+	// document.querySelector(connect to html id).addEventListener('type of event', which function to call if event happens);
+    document.querySelector('#plusFive').addEventListener('click', plusMe);
+	document.querySelector('#minusFive').addEventListener('click', minusMe);
+	
+});
 
-	});
-
+function plusMe()
+{
+	// lol okay, if you try += 5 it adds 5 as a string to it
+	// but if you try -= it minus as an integer
+	// so this fix works -= -
+	document.getElementById("numberLabel").textContent -= -5;
 }
 
-/**
- * Add click handlers to settings for user.
- */
-function timeButtonOnClickHandler(event) {
-	var targetElem = event.target;
-	var timeSelected = 15; // Get button text and convert to number
-	var settingKey = targetElem.parentNode.id; // Get id of node (tells us whether break or pomodoro)
-	localStorage[settingKey] = timeSelected; // Save in localstorage.
-	document.getElementById(settingKey.split("-")[0]).innerText = timeSelected;
+function minusMe()
+{
+	document.getElementById("numberLabel").textContent -= 5;
 }
-
-document.addEventListener('DOMContentLoaded', init);
