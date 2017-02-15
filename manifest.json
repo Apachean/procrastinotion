@@ -11,6 +11,6 @@
   },
   
   "background": {
-   "page": "popup.html"
+   "page": "background.js"
   }
 }
