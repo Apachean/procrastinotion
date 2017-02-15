@@ -18,6 +18,7 @@ function plusMe()
 	// so this fix works -= -
 	document.getElementById("numberLabel").textContent -= -5;
 }
+	//If you make it +document.getElementById("numberLabel").textContent += 5 it adds as an integer
 
 function minusMe()
 {
