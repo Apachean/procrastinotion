@@ -1,5 +1,4 @@
-# procrastinotion
-A chrome extension to monitor time spent online.
+Tomato is a Pomodoro timer extension developed to introduce chrome extensions during a GT WebDev presentation.
 
-Helpful tutorial links
-https://robots.thoughtbot.com/how-to-make-a-chrome-extension
+Tut video
+https://www.youtube.com/watch?v=ialCK8zX_UE

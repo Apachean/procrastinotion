@@ -1,65 +1,52 @@
 <!DOCTYPE html>
-<html>
-<style>
-div.container {
-    width: 100%;
-    border: 1px solid gray;
-}
-
-footer {
-    color: white;
-    background-color: black;
-    clear: left;
-    text-align: center;
-	padding-top: 15px
-	
-}
-
-
-table, th, td {
-    border: 0px solid black;
-    border-collapse: collapse;
-}
-th {
-    font-size: 40px;
-    text-align: center;
-	padding-left: 25px;
-	padding-right: 25px;
-}
-
-td {
-    font-size: 20px;
-	font-style: italic;
-    text-align: center;
-}
-
-</style>
+<html lang="en">
 
 <head>
-	<p id="name"></p>
-	<p id="test"></p>
-	<p id="demo">JavaScript can change HTML content.</p>
-
-<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
-
+  
+  <!-- our javascript code for user interaction -->
+  <script src="popup.js"></script>
+  
+  <!-- links to a massive css style sheet -->
+  <link href="bootstrap.min.css" rel="stylesheet" media="screen">
+  
+  <!-- our personalised stylesheet-->
+  <link href="main.css" rel="stylesheet">
+  
 </head>
+
 <body>
 
-<table style="width:100%">
-  <tr>
-    <th><a style="color:red">420</a>/<a>360</a></th>
-    <th><a style="color:green">183</a>/<a>120</a></th>
-  </tr>
-  <tr>
-    <td>Free time</td>
-    <td>Work time</td>
-  </tr>
+  <!-- bootstrap style class triggers -->
+  <!-- id does not trigger style, it is used for javascript -->
+  <div class="container-fluid">    
+    <div id="main" class="row-fluid">
+      <div class="span12">
+		
+		<table style="width:100%">
+        <tr>
+          <th><a id="numberLabel">0</a>/<a>360</a></th>
+          <th><a style="color:orange">10</a>/<a>120</a></th>
+		  <th><a id="urlplz">0</a></th>
+		  <th><a id="Nortee">0</a></th>
+        </tr>
+        <tr>
+          <td>Free time</td>
+          <td>Work time</td>
+        </tr>
+		<button type="button" id="URL" class="btn btn-success">"URL PLZ"</button>
+		<button type="button" id="Bad" class="btn btn-success">"Nortee"</button> 
+		<button type="button" id="start" class="btn btn-success">
+		  <span class="icon-play icon-white"></span>
+		</button>
+		<button type="button" id="stopPLEASE" class="btn btn-success">
+		  <span class="icon-stop icon-white"></span>
+		</button>
 </table>
-
+	  
+	  </div>
+    </div>
+  </div>
+    
 </body>
 
-</div>
-
-</body>
 </html>
-
