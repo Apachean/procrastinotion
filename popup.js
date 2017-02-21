@@ -3,7 +3,7 @@ var bgpage = chrome.extension.getBackgroundPage();
 var totalSeconds = 0;
 var playing = false;
 var varTimer;
-window.bad = ["red", "facebook"];
+window.bad = ["reddit", "facebook", "https://www.facebook.com/"];
 chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
     window.url = tabs[0].url;
 });
@@ -46,9 +46,8 @@ function geturl()
    document.getElementById("urlplz").textContent = url;
 }
 
-function naughtytime () {
-
-if (bad.indexOf(url)){
-document.getElementById("Nortee").textContent = "Oh No!";}
+ function naughtytime () {
+if (url.includes("reddit")||url.includes("facebook") ||url.includes("twitter"))  
+{document.getElementById("Nortee").textContent = "Oh No!";}
 else {document.getElementById("Nortee").textContent = "Good";}
-} 
+}
