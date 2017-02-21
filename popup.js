@@ -3,10 +3,10 @@ var bgpage = chrome.extension.getBackgroundPage();
 var totalSeconds = 0;
 var playing = false;
 var varTimer;
-window.bad = ["reddit", "facebook", "https://www.facebook.com/"];
+window.bad = ["reddit", "facebook", "https://www.facebook.com/"]; //This doesn't really do anything right now
 chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
     window.url = tabs[0].url;
-});
+}); //This finds the url
 
 // primary function to connect to extension
 document.addEventListener('DOMContentLoaded', function () {
@@ -45,7 +45,7 @@ function geturl()
 
    document.getElementById("urlplz").textContent = url;
 }
-
+//The function below checks if the URL includes a bad string (This is seemingly the best way)
  function naughtytime () {
 if (url.includes("reddit")||url.includes("facebook") ||url.includes("twitter"))  
 {document.getElementById("Nortee").textContent = "Oh No!";}
