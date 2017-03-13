@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body 
 {
 	min-width: 150px;
@@ -13,3 +14,40 @@ button
 {
 	margin-left: 3px;
 }
+=======
+body 
+{
+	min-width: 150px;
+	min-height: 90px;
+}
+
+h1
+{
+	text-align: center;
+}
+
+/* no idea how to center a group of buttons :( */
+button
+{
+	margin-left: 3px;
+}
+
+table, th, td {
+	padding-top: 5px;
+    border: 0px solid black;
+    border-collapse: collapse;
+}
+th {
+    font-size: 40px;
+    text-align: center;
+	padding-top: 25px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+td {
+    font-size: 20px;
+	font-style: italic;
+    text-align: center;
+}
+>>>>>>> origin/Matt
