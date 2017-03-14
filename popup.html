@@ -16,34 +16,27 @@
 
 <body>
 
-  <!-- bootstrap style class triggers -->
-  <!-- id does not trigger style, it is used for javascript -->
-  <div class="container-fluid">    
-    <div id="main" class="row-fluid">
-      <div class="span12">
-		
-		<table style="width:100%">
-        <tr>
-          <th><a id="numberLabel"">0</a>/<a>360</a></th>
-          <th><a style="color:orange">10</a>/<a>120</a></th>
-        </tr>
-        <tr>
-          <td>Free time</td>
-          <td>Work time</td>
-        </tr>
-		
-		<button type="button" id="start" class="btn btn-success">
-		  <span class="icon-play icon-white"></span>
-		</button>
-		<button type="button" id="stopPLEASE" class="btn btn-success">
-		  <span class="icon-stop icon-white"></span>
-		</button>
-</table>
-	  
-	  </div>
-    </div>
+  <!-- id is used for javascript -->
+  <div class="green">    
+    <div class="red">
+	  <div class="text"><strong id="surfTime">?</strong><strong id="surfTimeLimit">/?</strong></div>
+	  <div class="text"><sub>Surf time</sub></div>
+	</div>
+	<div class="blue">
+	  <div class="text"><strong id="workTime">?</strong><strong  id="workTimeLimit">/?</strong></div>
+	  <div class="text"><sub>Work time</sub></div>
+	</div>
   </div>
-    
+  
+  <div class="bottom">
+  	<button type="button" id="resume" class="btn btn-success">
+	  <span class="icon-play icon-white"></span>
+    </button>
+	<button type="button" id="pause" class="btn btn-success">
+	  <span class="icon-pause icon-white"></span>
+	</button>
+  </div>
+  
 </body>
 
 </html>

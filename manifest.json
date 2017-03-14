@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "Button testing",
-  "description": "Simple button",
-  "version": "0.0.0.1",
+  "name": "Procrastinotion",
+  "description": "This extension will record your online behaviour and reflect the information back to you in real-time.",
+  "version": "0.0.0.3",
 
   "browser_action": {
    "default_icon": "eye-icon.png",
@@ -11,6 +11,8 @@
   },
   
   "background": {
-   "page": "background.js"
-  }
+   "scripts": ["background.js"]
+  },
+  
+  "permissions": ["tabs", "activeTab", "storage"]
 }
