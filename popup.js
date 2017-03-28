@@ -2,8 +2,8 @@
 var bgpage = chrome.extension.getBackgroundPage();
 var totalSeconds = 0;
 var playing = false;
-var workTimeLimit = 360;
-var surfTimeLimit = 120;
+var workTimeLimit = Number(localStorage.workTimeLimit) || 300;
+var surfTimeLimit = Number(localStorage.surfTimeLimit) || 300;
 
 var varTimer;
 
@@ -75,10 +75,13 @@ function pause()
 
 function setWork()
 {var newWork = prompt ("Please enter your new Work Time","");
- workTimeLimit = newWork;
+ workTimeLimit=newWork;
+ localStorage.workTimeLimit=newWork;
 }
+
 
 function setSurf()
 {var newSurf = prompt ("Please enter your new Surf Time","");
  surfTimeLimit = newSurf;
+ localStorage.surfTimeLimit=newSurf;
 }
