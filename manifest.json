@@ -6,7 +6,7 @@
   "version": "0.0.0.3",
 
   "browser_action": {
-   "default_icon": "eye-icon.png",
+   "default_icon": "pigeon.png",
    "default_popup": "popup.html"
   },
   
