@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('#resume').addEventListener('click', resume);
 	document.querySelector('#pause').addEventListener('click', pause);
 	 document.querySelector('#setWork').addEventListener('click', setWork);
-	document.querySelector('#setSurf').addEventListener('click', pause);
+	document.querySelector('#setSurf').addEventListener('click', setSurf);
 	
 });
 
