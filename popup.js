@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	// document.querySelector(connect to html id).addEventListener('type of event', which function to call if event happens);
     document.querySelector('#resume').addEventListener('click', resume);
 	document.querySelector('#pause').addEventListener('click', pause);
+	 document.querySelector('#setWork').addEventListener('click', setWork);
+	document.querySelector('#setSurf').addEventListener('click', pause);
 	
 });
 
@@ -71,3 +73,12 @@ function pause()
 	bgpage.pauseTimer();
 }
 
+function setWork()
+{var newWork = prompt ("Please enter your new Work Time","");
+ workTimeLimit = newWork;
+}
+
+function setSurf()
+{var newSurf = prompt ("Please enter your new Surf Time","");
+ surfTimeLimit = newSurf;
+}

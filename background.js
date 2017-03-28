@@ -4,7 +4,7 @@ var surfingTime = 0;
 var timerState = 1;
 
 // make the array work in checkURL(url)
-var arrayOfSurfSites = ["facebook", "youtube"];
+var arrayOfSurfSites = ["facebook", "youtube"]; //this doesn't work yet
 
 var varTimer;
 
@@ -50,7 +50,7 @@ function resumeWorkTime()
 	{
 		clearInterval(varTimer);
 	}
-	varTimer = setInterval(incrementWork, 1000);
+	varTimer = setInterval(incrementWork, 60000);
 }
 
 function pauseWorkTime()
@@ -70,7 +70,7 @@ function resumeSurfTime()
 	{
 		clearInterval(varTimer);
 	}
-	varTimer = setInterval(incrementSurf, 1000);
+	varTimer = setInterval(incrementSurf, 60000);
 }
 
 function pauseSurfTime()
@@ -87,7 +87,7 @@ function incrementSurf()
 //The function below checks if the URL includes a bad string (This is seemingly the best way)
 function checkURL(url) 
 {
-	if (url.includes("reddit") || url.includes("facebook") || url.includes("youtube"))
+	if (url.includes("twitter")|| url.includes("facebook") || url.includes("youtube")|| url.includes("reddit")|| url.includes("game")|| url.includes("instagram")|| url.includes("tumblr"))
 	{
 		chrome.browserAction.setBadgeBackgroundColor({color:[254, 84, 66, 1]}); // red
 		//chrome.browserAction.setBadgeText({text: "Bad"});
